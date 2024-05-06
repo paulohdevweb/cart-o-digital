@@ -5,15 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cartãoanimado</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .painel {
+            text-align: center;
+            margin-top: 20vh;
+        }
+        .img {
+            max-width: 100%;
+            height: auto;
+        }
+        .menino, .menina {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-block;
+            margin: 10px;
+        }
+        @media (max-width: 768px) {
+            .painel {
+                margin-top: 10vh;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="painel">
-        <h1> Confira agora se é <strong class="menino">Menino</strong> ou <strong class="menina">Menina</strong>.</h1>
-        <img class="img" src=https://www.imagensanimadas.com/data/media/46/bebe-imagem-animada-0007.gif>
+        <h1>Confira agora se é <strong class="menino">Menino</strong> ou <strong class="menina">Menina</strong>.</h1>
+        <img class="img" src="https://www.imagensanimadas.com/data/media/46/bebe-imagem-animada-0007.gif">
       
-        <h2>Quer saber o que é :</h2>
+        <h2>Quer saber o que é:</h2>
 
-        <button onmouseover="fuja()" class="menino" id="menino"> Menino</button>
+        <button onmouseover="fuja()" class="menino" id="menino">Menino</button>
         <a href="https://youtube.com/shorts/whhIePp9nkU?feature=share"><button class="menina" id="menina">Menina</button></a>
 
         <h2>Click!!!</h2>
@@ -34,10 +60,7 @@
             
             botaoMenino.style.left = aleatorioX + "px";
             botaoMenino.style.top = aleatorioY + "px"; 
-
-
         }
-
     </script>
 </body>
 </html>
