@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cartãoanimado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="painel">
+        <h1> Confira agora se é <strong class="menino">Menino</strong> ou <strong class="menina">Menina</strong>.</h1>
+        <img class="img" src=https://www.imagensanimadas.com/data/media/46/bebe-imagem-animada-0007.gif>
+      
+        <h2>Quer saber o que é :</h2>
+
+        <button onmouseover="fuja()" class="menino" id="menino"> Menino</button>
+        <a href="https://youtube.com/shorts/whhIePp9nkU?feature=share"><button class="menina" id="menina">Menina</button></a>
+
+        <h2>Click!!!</h2>
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoMenino= document.getElementById("menino")
+
+            var larguraJanela= window.innerWidth;
+            var alturaJanela= window.innerHeight;
+
+            var maxX=larguraJanela - botaoMenino.offsetWidth;
+            var maxY=alturaJanela - botaoMenino.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+            
+            botaoMenino.style.left = aleatorioX + "px";
+            botaoMenino.style.top = aleatorioY + "px"; 
+
+
+        }
+
+    </script>
+</body>
+</html>
